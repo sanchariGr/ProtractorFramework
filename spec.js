@@ -3,8 +3,10 @@ describe('istockphoto :::',function(){
     browser.get('http://www.istockphoto.com/in');
     browser.driver.findElement(By.css('#search-phrase')).sendKeys("Bart Simpson");
     browser.driver.findElement(By.css('.search-bar__submit')).click();
+  });
 
-    // #refine_search
+    //#refine_search
+  it('::',function(){
     browser.driver.findElement(By.css('.refine-text')).click();
     browser.driver.findElement(By.css('label[for="sort_mostpopular"]')).click();
     browser.driver.findElement(By.css('label[for="alloweduse_editorialuseonly"]')).click();
@@ -13,21 +15,29 @@ describe('istockphoto :::',function(){
     browser.driver.findElement(By.css('.accordion.number-of-people')).click();
     // browser.driver.wait(10000)
     browser.driver.findElement(By.css('label[for="numberofpeople_one"]')).click();
+
+  });
     
     
+  it('::',function(){
     browser.driver.findElement(By.css('a[data-asset-id="458652479"]')).click();
     console.log('333333333')
     browser.driver.findElement(By.css('#lightbox-btn')).click();
     browser.driver.findElement(By.css('.search-bar__submit')).click();
     browser.driver.findElement(By.css('a[data-asset-id="516109480"]')).click();
 
-    #login flow
+  });
+
+  //#login flow
+  it('::',function(){
     browser.driver.findElement(By.css('#register_email')).sendKeys("abc@mailinator.com");
     browser.driver.findElement(By.css('#register_password')).sendKeys("abcd12345678");
     browser.driver.findElement(By.css('.#register_password_confirmation')).sendKeys("abcd12345678");
     browser.driver.findElement(By.css('#register-button')).click();
     expect(browser.driver.findElement(By.css('li[data-istock-user-id="0"]'))).toEqual('Account');
+  });
 
+  it('::',function(){
     #choose item
     browser.driver.findElement(By.css('a[data-asset-id="516109480"]')).click();
     browser.driver.findElement(By.css('.refine-text')).click();
@@ -35,8 +45,11 @@ describe('istockphoto :::',function(){
     browser.driver.findElement(By.css('.refine-text')).click();
     browser.driver.findElement(By.css('.refine-text')).click();
     expect(browser.driver.findElement(By.css('h1[ng-hide="showFullTitle"]'))).toEqual('Life size Bart Simpson - Stock image');
+  });
 
-    #Buy Item
+
+    //#Buy Item
+  it('::',function(){
     browser.driver.findElement(By.css('download-button')).click();
     expect(browser.driver.findElement(By.css('#checkout-view"]'))).toEqual("Checkout");
     browser.driver.findElement(By.css('#firstNameInput')).sendKeys("Test");
