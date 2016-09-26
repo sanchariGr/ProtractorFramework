@@ -10,9 +10,7 @@ exports.config = {
   },
 
   capabilities: {
-    'browserName': 'chrome',
-     // chromeOnly: true,
-     directConnect: true
+    'browserName': 'chrome'
   },
 
   jasmineNodeOpts: {
